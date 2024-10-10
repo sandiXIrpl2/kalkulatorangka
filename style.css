@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    flex-direction: column; /* Mengatur elemen secara vertikal */
+    padding: 20px;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column; /* Kalkulator di atas, riwayat di bawah */
+    align-items: center; /* Posisikan di tengah */
+    gap: 30px; /* Jarak antara kalkulator dan riwayat */
+  }
+  
+  .calculator {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+  }
+  
+  #display {
+    width: 100%;
+    height: 80px;
+    text-align: right;
+    font-size: 2.5em;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.orange {
+    background-color: rgb(255, 0, 242);
+    color: white;
+  }
+  
+  button.equal {
+    grid-column: span 2;
+  }
+  
+  button:hover {
+    background-color: #b3b3b3;
+  }
+  
+  button:active {
+    background-color: #999;
+  }
+  
+  .history {
+    color: black;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .history h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid rgb(255, 0, 242);
+    background-color: rgb(255, 0, 242);
+    color: white;
+  }
+  
+  tbody td {
+    background-color: #444;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .wrapper {
+      width: 100%;
+      max-width: 320px;
+    }
+  
+    .calculator,
+    .history {
+      width: 100%;
+    }
+  }
